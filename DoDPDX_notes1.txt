@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+Research the evolution of tools
+
+
+Research when pupper & chef came on the scene in relation to ec2
+
+
+
+Examples of advantages:
+programatically defined infrastructure
+bring up new nodes within seconds
+Not to mention the typical cloud stuff like ....
+
+Impedence mismatch
+-chef server is SPOF
+-idempotent operations are the only ones we can reason about
+-going from a known base state to a differentiated state
+- Converge(A, B) = B; Converge(B, C) = C;
+- Harder to reason about C because it's mutating an 
+

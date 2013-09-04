@@ -1,0 +1,23 @@
+Working title(s)
+    Cloud-Native DevOps
+
+Type
+    Presentation
+
+Abstract
+
+    As the role of IT administration has evolved, automation has been the
+common thread that drives progress to the next plateau.
+
+    Tools like Chef and Puppet helped to end the nightmare of shell scripts and
+distro-specific packaging, and gave us the idea of "DevOps", which is the
+reification of infrastructure. However, these tools arrived on the cusp of the
+transition in to the cloud, and so they were built for the realities of data
+centers and raw hardware.
+
+    This talk is about how we've attempted to bridge the gap to "Cloud-Native"
+DevOps. I'll try to demonstrate how some perceived drawbacks of the cloud
+can actually be huge advantages if used correctly.
+
+    I'll show that Chef has fundamental flawed and that operating in the
+cloud actually provides a way forward.
