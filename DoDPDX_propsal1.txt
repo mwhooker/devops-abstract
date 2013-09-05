@@ -32,10 +32,6 @@ to the cloud.
 chef in the cloud, and a couple weird tricks we use to exploit the fundamental
 capabilities of IaaS. 
 
-
-
-
-
-One of the things I'll go in to is why, exactly, it is a
-terrible idea to run chef every time you spin up a new instance. I'll brag about
-the agility and safety we've been able to achieve.
+    By the end I hope I can convince you that there are ways to operate with
+more agility, to insulate yourselves from failure, and let every operator sleep
+better at night.
