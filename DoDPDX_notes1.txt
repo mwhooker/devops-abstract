@@ -5,7 +5,6 @@
 
 
 
-
 Research the evolution of tools
 
 
@@ -23,5 +22,21 @@ Impedence mismatch
 -idempotent operations are the only ones we can reason about
 -going from a known base state to a differentiated state
 - Converge(A, B) = B; Converge(B, C) = C;
-- Harder to reason about C because it's mutating an 
+- Harder to reason about C because it's mutating an
 
+
+
+
+
+timeline
+
+Stone Age - CFEngine
+2005 - Puppet initial release
+2006 - Initial AWS release / S3 / SQS / EC2 beta
+2007
+2008 - EC2 goes stable
+2009 - First Chef release
+2010
+2011 - CloudFormation
+
+http://phx.corporate-ir.net/phoenix.zhtml?c=176060&p=irol-corporateTimeline
