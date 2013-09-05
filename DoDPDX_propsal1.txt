@@ -33,4 +33,5 @@ more agility, to insulate yourselves from failure, and let every engineer sleep
 better at night.
 
     I also hope to inspire you to look for the gaps, and to come up with better
-ways to close them. This is only the beginning. We need fresh eyes and ideas.
+ways to close them. This is only the beginning. We need fresh eyes and new
+ideas.
