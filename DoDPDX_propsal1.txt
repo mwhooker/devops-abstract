@@ -6,7 +6,10 @@ Type
 
 Abstract
 
-    As the role of IT administration has evolved, automation has been the
+    As the role of IT administration has evolved, so have the tools. 
+
+
+With each iteration automation has been the
 common thread that drives progress to the next plateau.
 
     Tools like Chef and Puppet helped to end the nightmare of shell scripts and
