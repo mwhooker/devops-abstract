@@ -8,13 +8,22 @@ Abstract
 
     
 
-    The role of IT administrators is constantly evolving. My history starts with
-managing large numbers of commodity servers. Since then I've seen trends towards
-virtualization, Linux containers, PaaS, and IaaS. 
-    Our tools have generally done a pretty good job of keeping up 
+    The role of IT administrators is constantly evolving. We've been burdened
+(bestowed?) with the task of automating as much as possible as our
+infrastructure changes faster than we can keep up.
 
-, so have the tools. With each automation has been the
-common thread that drives progress to the next plateau.
+    Until 2005, you were probably using CFEngine or shell scripts and whatever
+package manager your OS supported. Around that time Puppet and Chef dropped, and
+it was enlightening. Then, in 2008, EC2 went stable, and the term DevOps started
+gaining popularity the next year.
+
+    With modern configuration management tools and an elastic supply of
+"machines" to run them on, we were able to start writing software-defined
+infrastructure.
+
+    Unfortunately, both Puppet and Chef were written before we understood best
+practices for operating IaaS. And it shows in the heritage of most subsequent
+configuration management tools.
 
     Tools like Chef and Puppet helped to end the nightmare of shell scripts and
 distro-specific packaging, and gave us the idea of "DevOps", which is the
