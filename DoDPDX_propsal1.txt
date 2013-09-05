@@ -6,7 +6,7 @@ Type
 
 Abstract
 
-    
+
 
     The role of IT administrators is constantly evolving. We've been burdened
 (bestowed?) with the task of automating as much as possible as our
@@ -30,7 +30,7 @@ to the cloud.
     This talk is about how we've worked to bridge the gap, to go
 "Cloud-Native". I'll demonstrate the impedance mismatch that occurs when you run
 chef in the cloud, and a couple weird tricks we use to exploit the
-capabilities of IaaS. 
+capabilities of IaaS.
 
     By the end I hope I can convince you that there are ways to operate with
 more agility, to insulate yourselves from failure, and let every operator sleep
