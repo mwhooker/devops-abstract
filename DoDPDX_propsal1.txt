@@ -21,9 +21,9 @@ gaining popularity the next year.
 "machines" to run them on, we were able to start writing software-defined
 infrastructure.
 
-    Unfortunately, both Puppet and Chef were written before we understood best
-practices for operating IaaS. And it shows in the heritage of most subsequent
-configuration management tools.
+    Unfortunately, both Puppet and Chef arrived just on the cusp of the
+transition to IaaS, before we understood best practices for operating in this
+new environment. And it shows in the heritage of most subsequent configuration management tools.
 
     Tools like Chef and Puppet helped to end the nightmare of shell scripts and
 distro-specific packaging, and gave us the idea of "DevOps", which is the
