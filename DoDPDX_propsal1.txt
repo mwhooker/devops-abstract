@@ -1,12 +1,10 @@
-Working title(s)
+Working title
     Cloud-Native DevOps
 
 Type
     Presentation
 
 Abstract
-
-
 
     The role of IT administrators is constantly evolving. We've been burdened
 (bestowed?) with the task of automating as much as possible as our
@@ -18,7 +16,7 @@ it was enlightening. Then, in 2008, EC2 went stable, and the term DevOps started
 gaining popularity the next year.
 
     With modern configuration management tools and an elastic supply of
-"machines" to run them on, we were able to start writing software-defined
+machines to run them on, we were able to start creating software-defined
 infrastructure.
 
     Unfortunately, both Puppet and Chef arrived just on the cusp of the
@@ -28,14 +26,18 @@ raw hardware. There is something lost in translation when we apply these tools
 to the cloud.
 
     This talk is about how we've worked to bridge the gap, to go
-"Cloud-Native". I'll demonstrate the impedance mismatch that occurs when you run
-chef in the cloud, and a couple weird tricks we use to exploit the
-capabilities of IaaS.
+Cloud-Native. I'll demonstrate the impedance mismatch that occurs when you run
+chef in the cloud, and one weird trick we use to exploit the capabilities of
+IaaS.
 
     By the end I hope I can convince you that there are ways to operate with
-more agility, to insulate yourselves from failure, and let every operator sleep
+more agility, to insulate yourselves from failure, and let every engineer sleep
 better at night.
 
     I also hope to inspire you to look for the gaps, and to come up with better
-ways to close them. What I'll demonstrate in this talk isn't done yet. We need
-fresh eyes and ideas.
+ways to close them. This is only the beginning. We need fresh eyes and ideas.
+
+
+# TODO
+
+add something concrete to the abstract
