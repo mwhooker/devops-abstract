@@ -27,7 +27,15 @@ new environment. These tools were the product of years of experience operating
 raw hardware. There is something lost in translation when we apply these tools
 to the cloud.
 
-    This talk is about how we've attempted to bridge the gap, to go
-"Cloud-Native". One of the things I'll go in to is why, exactly, it is a
+    This talk is about how we've worked to bridge the gap, to go
+"Cloud-Native". I'll demonstrate the impedance mismatch that occurs when you use
+chef in the cloud, and a couple weird tricks we use to exploit the fundamental
+capabilities of IaaS. 
+
+
+
+
+
+One of the things I'll go in to is why, exactly, it is a
 terrible idea to run chef every time you spin up a new instance. I'll brag about
 the agility and safety we've been able to achieve.
