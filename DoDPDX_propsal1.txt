@@ -28,10 +28,14 @@ raw hardware. There is something lost in translation when we apply these tools
 to the cloud.
 
     This talk is about how we've worked to bridge the gap, to go
-"Cloud-Native". I'll demonstrate the impedance mismatch that occurs when you use
-chef in the cloud, and a couple weird tricks we use to exploit the fundamental
+"Cloud-Native". I'll demonstrate the impedance mismatch that occurs when you run
+chef in the cloud, and a couple weird tricks we use to exploit the
 capabilities of IaaS. 
 
     By the end I hope I can convince you that there are ways to operate with
 more agility, to insulate yourselves from failure, and let every operator sleep
 better at night.
+
+    I also hope to inspire you to look for the gaps, and to come up with better
+ways to close them. What I'll demonstrate in this talk isn't done yet. We need
+fresh eyes and ideas.
