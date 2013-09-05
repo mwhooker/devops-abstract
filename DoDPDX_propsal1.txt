@@ -8,9 +8,10 @@ Abstract
 
     
 
-   The role of IT administrators is constantly evolving. My history starts with
+    The role of IT administrators is constantly evolving. My history starts with
 managing large numbers of commodity servers. Since then I've seen trends towards
-virtualization, Linux containers, and now PaaS, a.k.a. The Cloud.
+virtualization, Linux containers, PaaS, and IaaS. 
+    Our tools have generally done a pretty good job of keeping up 
 
 , so have the tools. With each automation has been the
 common thread that drives progress to the next plateau.
