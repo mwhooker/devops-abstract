@@ -1,5 +1,7 @@
 # Cloud-Native DevOps. v1b
 
+**CHANGE**
+**CHANGE**
 ## me
 
 * Digg in 2010
@@ -13,28 +15,36 @@
     * decided to use chef-solo because we didn't have anywhere to provision chef-server
 * came to Simple where we use Chef and chef-server for the most part
 
-
+**CHANGE**
 ## Chef at Simple
+**CHANGE**
 * We run entirely in AWS
 * use a fairly stripped down version of chef
+**CHANGE**
     * chef-server
     * rarely roles
     * no environments
     * production attributes.rb committed to master
         * trying to work with attribute precedence rules is too complicated
 
+**CHANGE**
 ## Considering the utility of chef
-
+**CHANGE**
 * let's talk about what chef is doing
     * cookbooks stored in Github
     * on push to master, start a Jenkins job
     * Jenkins publishes the cookbook to chef-server
+      * does everyone know what jenkins is?
     * every instance is configured to run chef-client every 15min or so
     * so far a good rhythm
     * cheap CI. Ignoring tests, code gets deployed in &lt; 15 minutes
+Does this sound familiar?
+How's it working?
 
+**CHANGE**
 * But
     * We have roughly 200 instances.
+**CHANGE**
         * Not a huge load, but it does make you realize that there are 13 opportunities a minute for something to go wrong
     * What type of thing are we worried about going wrong?
         * As I mentioned earlier, clobbering attributes accidentally is worrying
@@ -44,15 +54,20 @@
 * Why do we mutate state?
     * These operations are one way. No commutative property means rolling forward is the only option.
     * Even in the best case, when nothing has changed, idempotency is left to the cookbook maintainers.
+**CHANGE**
         * "Oh that's why that web server restarts every 15 minutes..."
     * Applying the same work flow above to bare metal – you don't have any other choice.
       * except smartOS, docker, coreOS, etc.
 
 ## Say Cloud one more time! I dare you.
+**CHANGE**
 * "Cloud sucks, it's so expensive, it's so unreliable, the performance is so bad."
 * The ops silver backs are defending their territory.
 * Though there's some truth to the criticism, it's different in positive ways, too.
 
+
+**CHANGE**
+speaking of positivity.
 * Our thesis is that chef in the cloud is an anti-pattern.
     * When we start thinking about taking away the parts we don't like
         * live state mutation
@@ -64,6 +79,7 @@
         * use ZooKeeper instead of search
         * and the linchpin of the whole system: pre-baked images (AMIs for us)
 
+**CHANGE**
 * Pre-baked AMIs
     * smart people like at smart companies already know this (Benjamin Black, Adrian Cockcroft)
     * decide what your instances will look like before you put them in to production
@@ -73,6 +89,7 @@
     * same exact everything from development to staging to prod
     * no live state mutation
 
+**CHANGE**
 ## Tool kit
 
 * very lucky to have Packer getting stable.
@@ -85,9 +102,10 @@
 * The same code creates artifacts for the whole work flow: dev -> stage -> prod
 * Anyone can download an image and run it in vagrant.
 
-
-## Lean in
+**CHANGE**
 ### Orient: you are not in kansas any more.
+**CHANGE**
+## Lean in
 * The utility of AWS doesn't end here
 * The way to deploy changes becomes much safer
 * auto-scaling groups
@@ -109,6 +127,6 @@
 * AWS and chef are simply the oldest and therefor more built and accessible.
 * I have confidence that projects like CoreOS, Docker, and SmartOS will turn applications into atomic components, facilitating the same kind of work flow as above.
 
-
+**CHANGE**
 ## What's next
 * I want to see a convergence tool that's slimmed down and purpose built for this.
