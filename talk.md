@@ -21,7 +21,7 @@
     * rarely roles
     * no environments
     * production attributes.rb committed to master
-        * trying to work with the complicated attribute precedence rules is too complicated
+        * trying to work with attribute precedence rules is too complicated
 
 ## Considering the utility of chef
 
@@ -46,6 +46,7 @@
     * Even in the best case, when nothing has changed, idempotency is left to the cookbook maintainers.
         * "Oh that's why that web server restarts every 15 minutes..."
     * Applying the same work flow above to bare metal – you don't have any other choice.
+      * except smartOS, docker, coreOS, etc.
 
 ## Say Cloud one more time! I dare you.
 * "Cloud sucks, it's so expensive, it's so unreliable, the performance is so bad."
@@ -57,13 +58,14 @@
         * live state mutation
         * chef-server SPOF
         * crazy configuration semantics
+        * legacy of brutality
     * And start to look at replacing them with things we do like
         * Chef-solo to reduce dependencies
         * use ZooKeeper instead of search
         * and the linchpin of the whole system: pre-baked images (AMIs for us)
 
 * Pre-baked AMIs
-    * smart people like Benjamin Black and Adrian Cockcroft already know this
+    * smart people like at smart companies already know this (Benjamin Black, Adrian Cockcroft)
     * decide what your instances will look like before you put them in to production
     * configure at build time any way you want
         * though we've reduced as many variables as possible.
@@ -73,27 +75,28 @@
 
 ## Tool kit
 
-* very lucky to have Mitchell Hashimoto's Packer getting stable
+* very lucky to have Packer getting stable.
+* from the same guy that does vagrant, Mitchell Hashimoto
 * Packer is a tool for generating images from conversion scripts
     * builders
-        * EC2, OpenStack, VirtualBox, VMWare
+        * EC2 (ebs, instance, chroot), OpenStack, VirtualBox, VMWare
     * provisioners
         * chef, puppet, bash, saltstack
 * The same code creates artifacts for the whole work flow: dev -> stage -> prod
 * Anyone can download an image and run it in vagrant.
 
 
-
 ## Lean in
+### Orient: you are not in kansas any more.
 * The utility of AWS doesn't end here
-* The way to deploy changes becomes much safe
+* The way to deploy changes becomes much safer
 * auto-scaling groups
+    * System is now programatically defined. Sort of looks like a node...
     * ASGs allow us to treat instances as what they are: ephemeral
     * if an instance is sick, we can just kill it. The ASG will build a new one.
     * Deploys are amazing, too.
         * Our initial plan is to update the ASG configuration to use the latest AMI and slowly kill off the old instances. They'll be replaced with new ones
-        * It's also conceivable to monitor for statistically significant increases in error rates during a deploy and automatically rolling back. 
-        * As an anecdote, Netflix deploy by spinning up a parallel infrastructure and adding it to the rotation. That way they can see exactly how different the two code bases are.
+        * As an anecdote, Netflix deploy by spinning up a parallel infrastructure and adding it to the rotation. Canary tier built right in to the deploy system.
 
 * Fringe benefits
     * Instance metadata is pretty powerful when you think about it
